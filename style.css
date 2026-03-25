@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #1a1400, #000 70%);
+  color: #eaeaea;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+nav h2 {
+  font-family: 'Playfair Display', serif;
+  color: #c6a84b;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #c6a84b;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 80px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+  color: #c6a84b;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #c6a84b, #f5d77a);
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(198,168,75,0.4);
+}
+
+.hero-img img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+/* ABOUT */
+.about {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  color: #c6a84b;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  max-width: 650px;
+  margin: auto;
+}
+
+.about-content p {
+  margin-bottom: 18px;
+  color: #ccc;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* SKILLS */
+.skills {
+  margin-top: 25px;
+}
+
+.skills span {
+  display: inline-block;
+  margin: 6px;
+  padding: 8px 18px;
+  border: 1px solid #c6a84b;
+  border-radius: 30px;
+}
+
+/* PROJECT */
+.projects {
+  padding: 100px 80px;
+  background: radial-gradient(circle at top, #1a1400, #000 80%);
+  text-align: center;
+}
+
+.section-sub {
+  color: #c6a84b;
+}
+
+.section-desc {
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  text-align: left;
+}
+
+.project-item {
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(198,168,75,0.2);
+  transition: 0.3s;
+}
+
+.project-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(198,168,75,0.2);
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.project-item h3 {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.project-item a {
+  display: inline-block;
+  margin: 8px 0;
+  color: #c6a84b;
+  text-decoration: none;
+}
+
+.project-item p {
+  color: #bbb;
+}
+
+/* JUDUL KATEGORI */
+.project-category {
+  margin: 60px 0 20px;
+  font-size: 22px;
+  color: #c6a84b;
+  text-align: left;
+  border-left: 4px solid #c6a84b;
+  padding-left: 15px;
+}
+
+/* SPACING ANTAR SECTION */
+.project-list {
+  margin-bottom: 40px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 100px 80px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact a {
+  color: #c6a84b;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    padding: 20px;
+  }
+}
+
+/* ================= RESPONSIVE UPGRADE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  nav {
+    padding: 20px 40px;
+  }
+
+  .hero {
+    padding: 100px 40px;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .projects {
+    padding: 80px 40px;
+  }
+
+  .contact {
+    padding: 80px 40px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-img img {
+    width: 220px;
+    margin-top: 20px;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 80px 20px;
+  }
+
+  .about-content {
+    padding: 0 10px;
+  }
+
+  /* PROJECT */
+  .projects {
+    padding: 80px 20px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-category {
+    font-size: 18px;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 80px 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-left,
+  .contact-right {
+    text-align: center;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .project-item {
+    padding: 15px;
+  }
+
+  .project-item h3 {
+    font-size: 16px;
+  }
+
+  .project-item p {
+    font-size: 13px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ICON CONTACT */
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(198,168,75,0.3);
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(198,168,75,0.3);
+  background: linear-gradient(135deg, #c6a84b, #f5d77a);
+}
+
+.contact-icons img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0.9);
+}
+
+.contact-icons a:hover img {
+  filter: brightness(0);
+}
+
+/* CONTACT ITEM (ICON + TEXT SEJAJAR) */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.contact-item img {
+  width: 26px;
+  height: 26px;
+}
+
+/* HOVER EFFECT */
+.contact-item:hover {
+  color: #c6a84b;
+  transform: translateX(5px);
+}
+
+/* RESPONSIVE BIAR TETEP BAGUS */
+@media (max-width: 768px) {
+  .contact-item {
+    justify-content: center;
+  }
+}
