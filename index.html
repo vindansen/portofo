@@ -10,10 +10,9 @@
 </head>
 
 <body>
-  
 
 <nav>
-  <h2>Vincent</h2>
+  <h2></h2>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -36,8 +35,8 @@
   </div>
 </section>
 
-<section id="about" class="about">
-  <h2>About Me</h2>
+<section id="about" class="about fade-up">
+    <h2>About Me</h2>
 
   <div class="about-content">
     <p>I’m a technology-focused individual with a background in Software Engineering, passionate about building elegant and modern digital experiences.</p>
@@ -58,8 +57,8 @@
   </div>
 </section>
 
-<section id="projects" class="projects">
-  <p class="section-sub">Portfolio</p>
+<section id="projects" class="projects fade-up">
+    <p class="section-sub">Portfolio</p>
   <h2>Project</h2>
   <p class="section-desc">Berikut beberapa project berdasarkan kategori</p>
 
@@ -125,8 +124,8 @@
 
 </section>
 
-<section id="contact" class="contact">
-  <div class="contact-container">
+<section id="contact" class="contact fade-up">
+    <div class="contact-container">
 
     <div class="contact-left">
       <h2>Team up for your next project!</h2>
@@ -162,7 +161,8 @@ const texts = [
   "Nǐ hǎo, wǒ jiàoㅤㅤ",
   "Hola, mi nombre esㅤㅤ",
   "hailo mera naam haiㅤㅤ",
-  "mrhbaan, asmi huㅤㅤ"
+  "mrhbaan, asmi huㅤㅤ",
+  "Haloo Sayaㅤㅤ"
 ];
 
 let lineIndex = 0;
@@ -193,7 +193,23 @@ function typeEffect() {
 }
 
 typeEffect();
+
+const faders = document.querySelectorAll('.fade-up');
+
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  faders.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      el.classList.add('show');
+    }
+  });
+});
 </script>
+
+
 
 </body>
 </html>
