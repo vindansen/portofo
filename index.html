@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  
 
 <nav>
   <h2>Vincent</h2>
@@ -22,8 +23,10 @@
 
 <section id="home" class="hero">
   <div class="hero-text">
-    <p>Hello, I'm</p>
-    <h1>Vincent</h1>
+    <p class="code-line">
+  <span id="code-text"></span><span class="cursor">|</span>
+</p>
+<h1>Vincent</h1>
     <p>Web Developer & Junior Software Engineer</p>
     <a href="#contact" class="btn">Contact Me</a>
   </div>
@@ -46,8 +49,8 @@
     <span>HTML</span>
     <span>CSS</span>
     <span>PHP</span>
-    <span></span>
-    <span></span>
+    <span>Network Topology</span>
+    <span>UI/UX Design</span>
   </div>
 </section>
 
@@ -149,6 +152,44 @@
 
   </div>
 </section>
+<script>
+const texts = [
+  "Hellooo Im",
+  "Nǐ hǎo, wǒ jiào",
+  "Hola, mi nombre es",
+  "hailo mera naam hai",
+  "mrhbaan, asmi hu"
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const currentText = texts[lineIndex];
+  const element = document.getElementById("code-text");
+
+  if (!isDeleting) {
+    element.innerHTML = currentText.substring(0, charIndex++);
+  } else {
+    element.innerHTML = currentText.substring(0, charIndex--);
+  }
+
+  let speed = 60;
+
+  if (!isDeleting && charIndex === currentText.length) {
+    speed = 1200; // pause
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    lineIndex = (lineIndex + 1) % texts.length;
+  }
+
+  setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+</script>
 
 </body>
 </html>
