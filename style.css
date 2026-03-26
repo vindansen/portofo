@@ -432,3 +432,51 @@ img {
     justify-content: center;
   }
 }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-item {
+  transition: 0.4s;
+}
+
+.project-item:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.btn:hover::after {
+  left: 120%;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-5px) scale(1.15) rotate(3deg);
+}
