@@ -113,25 +113,6 @@ nav ul li a:hover {
   border-radius: 30px;
 }
 
-.code-line {
-  font-family: monospace;
-  color: #c6a84b;
-  font-size: 14px;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-  opacity: 0.8;
-}
-
-/* cursor kedip */
-.cursor {
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
-}
-
 /* PROJECT */
 .projects {
   padding: 100px 80px;
